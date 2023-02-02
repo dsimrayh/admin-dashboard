@@ -1,11 +1,13 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {   
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 :root {
-    --main-color: rgb(7, 215, 243);
+    --main-color: rgb(32, 89, 212);
 }
 
 .container {
@@ -25,6 +27,8 @@
     width: 100%;
     height: 100%;
 }
+
+/* ---------- HEADER STYLES ---------- */
 
 #header {
     grid-column: 2/3;
@@ -53,6 +57,8 @@
     height: 100%;
     width: 100%;
     border: 1px solid #ccc;
+    border-radius: 5px;
+    opacity: 50%;
 }
 
 #greeting-container {
@@ -62,6 +68,8 @@
 #profile-container {
     grid-row: 1/4;
 }
+
+/* ---------- MAIN CONTENT STYLES ---------- */
 
 #content {
     background-color: rgb(243, 247, 255);;
@@ -87,30 +95,78 @@
     border: 2px solid var(--main-color)
 }
 
-
+/* ---------- NAVBAR STYLES ---------- */
 
 #navbar {
     grid-row: 1/3;
     background-color: rgb(48, 48, 48);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-h1 {
+#logo-container {
+    margin-top: 1rem;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    text-shadow: -1px -1px 10px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#logo {
+    margin-bottom: 10px;
+    height: 2rem;
+    width: 2rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.2);
+}
+
+#dash {
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 0.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#board {
     color: var(--main-color);
 }
 
-ul {
+#navbar-links {
     padding: 1rem;
     list-style: none;
+    width: 100%;
 }
 
-li {
-    color: rgb(143, 143, 143);
-    margin: 2rem 1rem;
+.link {
+    color: rgb(170, 170, 170);
+    margin: 1.6rem 1rem;
+
+    display: flex;
+    align-items: center;
 }
 
-li:hover {
+.link:hover {
     color: var(--main-color);
     cursor: pointer;
+    text-shadow: 1px 1px 10px var(--main-color);
 }
 
+.navbar-link-text {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
 
+.navbar-link-img {
+    height: 30px;
+    width: 30px;
+}
+
+.navbar-divider {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(97, 96, 96);
+}
