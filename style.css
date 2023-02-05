@@ -12,13 +12,22 @@
     --text-color: #3b3b3b;
 }
 
+.action-button,
+#profile-pic,
+.profile-buttons,
+input,
+input:focus,
+.link:hover {
+    cursor: pointer;
+}
+
 .container {
     height: 100vh;
     width: 100vw;
     font-family: sans-serif;
 
     display: grid;
-    grid-template-rows: minmax(6rem, 1fr) 8fr;
+    grid-template-rows: minmax(7rem, 1fr) 8fr;
     grid-template-columns: minmax(15rem, 1fr) 6fr;
 }
 
@@ -30,12 +39,15 @@
     height: 100%;
 }
 
+
+
+
+
 /* ---------- HEADER STYLES ---------- */
 
 #header {
     grid-column: 2/3;
     background-color: rgb(243, 247, 255);
-    border-bottom: 2px solid rgba(228, 228, 228, 0.4);
     padding: 1rem;
 
     display: grid;
@@ -46,32 +58,36 @@
     background-color: #fff;
     box-shadow: 0 1px 5px #ccc;
     border-radius: 5px;
-    padding: 1rem;
+    padding: 0.6rem 1.5rem;
+    font-family: 'Rubik', sans-serif;
 
     display: grid;
-    /*
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    */
 }
 
-#search-container,
-#greeting-container,
-#profile-container,
-#button-container {
-    height: 100%;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    opacity: 50%;
+#header-left-side {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-#greeting-container {
-    grid-row: 2/5;
+.action-button {
+    outline-color: transparent;
+    border: none;
+    background-color: #fff;
+    color: var(--text-color);
+    font-size: 1rem;
+    user-select: none;
 }
 
-#profile-container {
-    grid-row: 1/4;
+.action-button:hover {
+    color: var(--main-color);
+    transform: scale(1.04);
+}
+
+#down-caret {
+    font-size: 0.8rem;
 }
 
 input,
@@ -84,7 +100,7 @@ input:focus {
   border: none;
   outline: none;
   padding: 10px 20px;
-  width: 300px;
+  width: 400px;
   height: 40px;
   transition: width 0.5s;
 }
@@ -97,6 +113,69 @@ input:not(:focus) {
   height: 40px;
   width: 40px;
 }
+
+#header-right-side {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+#profile {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    background-image: url('./images/profile-picture.jpg');
+    background-repeat: no-repeat;
+    background-position: 70% 15%;
+    background-size: 150px;
+    height: 65px;
+    width: 65px;
+    border: 1px solid var(--main-color)
+}
+
+#header-divider {
+    height: 80%;
+    width: 1px;
+    background-color: #ccc;
+}
+
+.profile-buttons {
+    padding: 1rem;
+    outline-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    background-color: transparent;
+}
+
+.profile-buttons:hover {
+    transform: scale(1.04);
+}
+
+#profile-settings {
+    background-image: url('./images/profile-settings.png')
+}
+
+#notifications {
+    background-image: url('./images/notifications.png')
+}
+
+#messages {
+    background-image: url('./images/messages.png')
+}
+
+
+
+
 
 /* ---------- MAIN CONTENT STYLES ---------- */
 
@@ -117,7 +196,8 @@ input:not(:focus) {
     font-family: 'Rubik', sans-serif;;
     font-size: 1.8rem;
     color: var(--text-color);
-    margin-left: 3rem;
+    padding-left: 3rem;
+    border-bottom: 2px solid rgba(228, 228, 228, 0.4);
 }
 
 .primary-metric {
@@ -131,6 +211,10 @@ input:not(:focus) {
 .primary-metric:hover {
     border: 2px solid var(--main-color)
 }
+
+
+
+
 
 /* ---------- NAVBAR STYLES ---------- */
 
@@ -188,7 +272,6 @@ input:not(:focus) {
 
 .link:hover {
     color: var(--main-color);
-    cursor: pointer;
     text-shadow: 1px 1px 10px var(--main-color);
 }
 
