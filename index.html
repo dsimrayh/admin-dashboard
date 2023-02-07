@@ -9,7 +9,8 @@
 </head>
 <body>
     <div class="container">
-        <div id="header">
+
+        <header id="header">
             <div id="header-container">
                 <div id="header-left-side">
                     <button class="action-button">New</button>
@@ -29,8 +30,9 @@
                     <button class="profile-buttons" id="messages"></button>
                 </div>
             </div>
-        </div>
-        <div id="navbar">
+        </header>
+
+        <nav id="navbar">
 
             <div id="logo-container">
                 <img src="./images/icons8-dashboard-64.png" id="logo" alt="logo">
@@ -53,19 +55,35 @@
                 <li class="link"><img class="navbar-link-img" src="./images/gray-icons/support.png"><p class="navbar-link-text">Support</p></li></li>              
             </ul>
             
-        </div>
-        <div id="content">
+        </nav>
+
+        <main id="main">
 
             <p id="content-header">Overview</p>
 
-            <div class="primary-metric"></div>
-            <div class="primary-metric"></div>
-            <div class="primary-metric"></div>
-            <div class="primary-metric"></div>
+            <div id="content">
+            <!--
+                <div id="primary-metric-container">
+                    <div id="revenue" class="primary-metric main-content-card"></div>
+                    <div id="expenses" class="primary-metric main-content-card"></div>
+                    <div id="units-ordered" class="primary-metric main-content-card"></div>
+                    <div id="website-visitors" class="primary-metric main-content-card"></div>
+                </div>
 
-
-
-        </div>
+                <div id="monthly-sales-trends" class="main-content-card"></div>
+                <div id="region-breakdown" class="main-content-card">
+                    <div id="map" class="main-content-card"></div>
+                    <div id="top-region" class="main-content-card"></div>
+                    <div id="worst-region" class="main-content-card"></div>
+                </div>
+                <div id="expense-breakdown" class="main-content-card"></div>
+                <div id="top-performing-items" class="main-content-card"></div>
+                <div id="projects" class="main-content-card"></div>
+                <div id="recent-activity" class="main-content-card"></div>
+            -->
+            </div>
+        </main>
+        
     </div>
     <script type="text/javascript" src="./index.js"></script>
 </body>
