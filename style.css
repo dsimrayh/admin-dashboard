@@ -28,7 +28,7 @@ input:focus,
 
     display: grid;
     grid-template-rows: 7rem 1fr;
-    grid-template-columns: minmax(15rem, 1fr) 6fr;
+    grid-template-columns: 1fr 6fr; /* minmax(15rem, 1fr) */
     grid-template-areas: 
         "navbar header"
         "navbar main";
@@ -71,6 +71,7 @@ input:focus,
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-flow: row wrap;
     gap: 1.5rem;
 }
 
@@ -102,7 +103,7 @@ input:focus {
   border: none;
   outline: none;
   padding: 10px 20px;
-  width: 400px;
+  width: 250px;
   height: 40px;
   transition: width 0.5s;
 }
@@ -121,6 +122,7 @@ input:not(:focus) {
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: center;
+    flex-flow: row-reverse wrap;
     gap: 1rem;
 }
 
@@ -185,6 +187,7 @@ input:not(:focus) {
 #main {
     grid-area: main;
     background-color: var(--bg-color);
+    padding: 0 1rem;
 }
 
 #content-header {
@@ -196,30 +199,26 @@ input:not(:focus) {
     border-bottom: 2px solid rgba(228, 228, 228, 0.4); 
 }
 
-.main-content-card {
+.card {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 1px 5px #ccc;
     border-radius: 5px;
 }
 
-/* 
-
-#primary-metric-container {
+#main-info-container {
     display: grid;
-    grid-template-columns: repeat(4, minmax(12rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-gap: 1rem;
+    padding: 1rem 0;
 }
 
-.primary-metric {
-    width: auto;
+.main-info-card {    
     height: 8rem;
 }
 
-.primary-metric:hover {
+.main-info-card:hover {
     border: 2px solid var(--main-color)
 }
-
-*/
 
 /*
 
@@ -327,4 +326,43 @@ input:not(:focus) {
     height: 1px;
     width: 100%;
     background-color: rgb(97, 96, 96);
+}
+
+
+
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media only screen and (max-width: 1350px) {
+    input:focus {
+        width: 175px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #header-left-side {
+        justify-content: center;
+    }
+    #header-right-side {
+        flex-direction: column;
+    }
+    #header-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 2rem;
+
+        overflow: scroll;
+    }
+    #profile {
+        flex-direction: column;
+    }
+    #header-divider {
+        height: 1px;
+        width: 80%;
+    }
+    .container {
+        grid-template-rows: 30vh 1fr;
+    }
 }
