@@ -15,7 +15,7 @@
 
 .action-button,
 #profile-pic,
-.profile-buttons,
+.profile-button,
 input,
 input:focus,
 .link:hover {
@@ -28,7 +28,7 @@ input:focus,
 
     display: grid;
     grid-template-rows: 7rem 1fr;
-    grid-template-columns: 1fr 6fr; /* minmax(15rem, 1fr) */
+    grid-template-columns: minmax(15rem, 1fr) 6fr;
     grid-template-areas: 
         "navbar header"
         "navbar main";
@@ -39,6 +39,11 @@ input:focus,
 #navbar {
     width: 100%;
     height: 100%;
+}
+
+#navbar,
+#main {
+    overflow: auto;
 }
 
 
@@ -152,7 +157,12 @@ input:not(:focus) {
     background-color: #ccc;
 }
 
-.profile-buttons {
+.profile-button-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-button {
     padding: 1rem;
     outline-color: transparent;
     border: none;
@@ -162,7 +172,7 @@ input:not(:focus) {
     background-color: transparent;
 }
 
-.profile-buttons:hover {
+.profile-button:hover {
     transform: scale(1.04);
 }
 
@@ -177,76 +187,6 @@ input:not(:focus) {
 #messages {
     background-image: url('./images/messages.png')
 }
-
-
-
-
-
-/* ---------- MAIN CONTENT STYLES ---------- */
-
-#main {
-    grid-area: main;
-    background-color: var(--bg-color);
-    padding: 0 1rem;
-}
-
-#content-header {
-    background-color: var(--bg-color);
-    font-family: 'Rubik', sans-serif;;
-    font-size: 1.8rem;
-    color: var(--text-color);
-    padding: 1rem 0 1rem 3rem;
-    border-bottom: 2px solid rgba(228, 228, 228, 0.4); 
-}
-
-.card {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 1px 5px #ccc;
-    border-radius: 5px;
-}
-
-#main-info-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    grid-gap: 1rem;
-    padding: 1rem 0;
-}
-
-.main-info-card {    
-    height: 8rem;
-}
-
-.main-info-card:hover {
-    border: 2px solid var(--main-color)
-}
-
-/*
-
-#monthly-sales-trends {
-    
-}
-
-#region-breakdown {
-    
-}
-
-#expense-breakdown {
-    
-}
-
-#top-performing-items {
-    
-}
-
-#projects {
-    
-}
-
-#recent-activity {
-    
-}
-
-*/
 
 
 
@@ -332,11 +272,71 @@ input:not(:focus) {
 
 
 
+/* ---------- MAIN CONTENT STYLES ---------- */
+
+#main {
+    grid-area: main;
+    background-color: var(--bg-color);
+    padding: 0 1rem 1rem 1rem;
+}
+
+#content-header {
+    background-color: var(--bg-color);
+    font-family: 'Rubik', sans-serif;;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    padding: 1rem 0 1rem 3rem;
+    border-bottom: 2px solid rgba(228, 228, 228, 0.4); 
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 5px #ccc;
+    border-radius: 5px;
+}
+
+#main-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-gap: 1rem;
+    padding: 1rem 0;
+}
+
+.main-info-card {    
+    height: 8rem; /* Force height - no content */
+}
+
+.main-info-card:hover {
+    border: 2px solid var(--main-color)
+}
+
+#charts-container {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-gap: 1rem;
+}
+
+#monthly-sales-trends {
+    height: 35rem;
+}
+
+#region-breakdown {
+    height: 35rem;
+}
+
+
+
+
+
 /* ---------- MEDIA QUERIES ---------- */
 
 @media only screen and (max-width: 1350px) {
     input:focus {
         width: 175px;
+    }
+    #charts-container {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr; /* Can change this responsive row layout once content is added */
     }
 }
 
@@ -351,9 +351,8 @@ input:not(:focus) {
     #header-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-gap: 2rem;
-
-        overflow: scroll;
+        grid-gap: 1rem;
+        overflow: auto;
     }
     #profile {
         flex-direction: column;
