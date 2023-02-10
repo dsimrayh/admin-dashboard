@@ -69,7 +69,7 @@ input:focus,
     font-family: 'Rubik', sans-serif;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto 1fr;
 }
 
 #header-left-side {
@@ -108,7 +108,7 @@ input:focus {
   border: none;
   outline: none;
   padding: 10px 20px;
-  width: 250px;
+  width: 380px;
   height: 40px;
   transition: width 0.5s;
 }
@@ -324,7 +324,38 @@ input:not(:focus) {
     height: 35rem;
 }
 
+#item-performance {
+    height: 20rem;
+    margin: 1rem 0;
+}
 
+#projects-activity-container {
+    margin: 1rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+#projects {
+    height: 25rem;
+}
+
+#activity {
+    height: 25rem;
+}   
+
+
+
+#monthly-sales-trends,
+#region-breakdown,
+#item-performance,
+#projects,
+#activity,
+.main-info-card {
+    display: grid;
+    place-items: center;
+}
 
 
 
@@ -332,7 +363,7 @@ input:not(:focus) {
 
 @media only screen and (max-width: 1350px) {
     input:focus {
-        width: 175px;
+        width: 240px;
     }
     #charts-container {
         grid-template-columns: 100%;
@@ -341,7 +372,9 @@ input:not(:focus) {
 }
 
 @media only screen and (max-width: 1200px) {
-
+    input:focus {
+        width: 180px;
+    }
     #header-left-side {
         justify-content: center;
     }
