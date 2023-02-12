@@ -73,6 +73,7 @@
             
             <div id="charts-container">
                 <div id="monthly-sales-trends" class="card">
+                    <p id="chart-title">Monthly Sales Trends</p>
                     <svg id="chart" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">      
                     <path 
                         d="M 0,499.35562705565235 
@@ -290,8 +291,12 @@
                         <circle cx="986" cy="127.34618018621427" r="6" fill="#444cf7" />   
                     </g> 
                     </svg>
+                    <p id="x-labels">Week</p>
+                    <p id="y-labels">Sales</p>
                 </div>
-                <div id="region-breakdown" class="card">Region breakdown</div>
+                <div id="region-breakdown" class="card">
+                    <img id="map" src="./images/us.svg" alt="heatmap">
+                </div>
             </div>
 
             <div id="item-performance" class="card">Item performance</div>
