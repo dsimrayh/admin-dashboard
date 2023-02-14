@@ -67,6 +67,7 @@ input:focus,
     border-radius: 5px;
     padding: 0.6rem 1.5rem;
     font-family: 'Rubik', sans-serif;
+    color: var(--text-color);
 
     display: grid;
     grid-template-columns: auto 1fr;
@@ -215,7 +216,7 @@ input:not(:focus) {
 }
 
 #logo {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
     height: 2rem;
     width: 2rem;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
@@ -282,7 +283,7 @@ input:not(:focus) {
 
 #content-header {
     background-color: var(--bg-color);
-    font-family: 'Rubik', sans-serif;;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.8rem;
     color: var(--text-color);
     padding: 1rem 0 1rem 3rem;
@@ -305,10 +306,40 @@ input:not(:focus) {
 
 .main-info-card {    
     height: 8rem; /* Force height - no content */
+    padding: 1rem;
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .main-info-card:hover {
     border: 2px solid var(--main-color)
+}
+
+.main-info-card:hover .main-info-metric {
+    color: var(--main-color);
+}
+
+.main-info-card-title {
+    color: #777;
+    font-size: 1rem;
+}
+
+.main-info-metric {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.main-info-percent-change {
+    font-size: 0.85rem;
+    color: green;
+}
+
+.red {
+    color: red;
 }
 
 #charts-container {
@@ -329,6 +360,7 @@ input:not(:focus) {
 #chart-title {
     color: var(--text-color);
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #chart {
@@ -370,6 +402,7 @@ input:not(:focus) {
 #region-breakdown-header {
     color: var(--text-color);
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #map {
@@ -407,7 +440,7 @@ input:not(:focus) {
 }
 
 #best-region {
-    color: lime;
+    color: green;
 }
 
 #worst-region {
@@ -434,8 +467,6 @@ input:not(:focus) {
     height: 25rem;
 }   
 
-
-
 #monthly-sales-trends,
 #region-breakdown,
 #item-performance,
@@ -445,6 +476,8 @@ input:not(:focus) {
     display: grid;
     place-items: center;
 }
+
+
 
 
 
