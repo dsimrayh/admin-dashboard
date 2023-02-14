@@ -360,11 +360,58 @@ input:not(:focus) {
 #region-breakdown {
     height: 35rem;
     padding: 1rem;
+
+    display: grid;
+    place-content: center;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 1rem;
+}
+
+#region-breakdown-header {
+    color: var(--text-color);
+    font-size: 1.5rem;
 }
 
 #map {
     height: 100%;
     width: 100%;
+}
+
+#best-worst-region-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+}
+
+.region-card {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+    padding: 0.5rem 4rem 2rem 4rem;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.region-card-header {
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.region {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#best-region {
+    color: lime;
+}
+
+#worst-region {
+    color: red;
 }
 
 #item-performance {
