@@ -46,6 +46,27 @@ input:focus,
     overflow: auto;
 }
 
+#menu {
+    background-color: var(--bg-color);
+    padding: 0.5rem 0 0 1rem;
+    display: none;
+    grid-area: menu;
+}
+
+#menu-icon,
+#menu-icon-2  {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+#menu-2 {
+    background-color: rgb(48, 48, 48);
+    padding: 0.5rem 0 0 1rem;
+    display: none;
+    align-self: flex-start;
+}
+
+
 
 
 
@@ -494,6 +515,9 @@ input:not(:focus) {
 }
 
 @media only screen and (max-width: 1200px) {
+    .container {
+        grid-template-rows: 30vh 1fr;
+    }
     input:focus {
         width: 180px;
     }
@@ -516,11 +540,38 @@ input:not(:focus) {
         height: 1px;
         width: 80%;
     }
-    .container {
-        grid-template-rows: 30vh 1fr;
-    }
 }
 
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto 30vh 1fr;
+        grid-template-areas: 
+            "menu"
+            "header"
+            "main";
+    }
+    #navbar {
+       display: none;
+    }
+    #navbar-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .link {
+        margin: 0.8rem 1rem;
+    }
+    .navbar-divider {
+        width: 70%;
+        margin: 0.5rem 0;
+    }
+    #menu,
+    #menu-2 {
+        display: block;
+    }
+}
 
 
   
