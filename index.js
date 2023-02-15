@@ -23,15 +23,18 @@ const navbar = document.querySelector('#navbar');
 const container = document.querySelector('.container');
 // Display navbar, have it take up the whole screen, hide the overflow
 menuIcon.addEventListener('click', () => {
-    container.style.gridTemplateRows = '100vh';
-    container.style.gridTemplateAreas = '"navbar"';
-    container.style.overflow = 'hidden';
-    navbar.style.display = 'flex';
+    container.classList.add('mobile');
+    navbar.classList.add('mobile');
 })
 // Revert back to standard styles for mobile and hide the navbar again
 menuIcon2.addEventListener('click', () => {
-    container.style.gridTemplateRows = 'auto 30vh 1fr';
-    container.style.gridTemplateAreas = '"menu" "header" "main"';
-    container.style.overflow = 'visible';
-    navbar.style.display = 'none';
+    container.classList.remove('mobile');
+    navbar.classList.remove('mobile');
+})
+// If the window is resized larger then mobile breakpoint, remove mobile classes
+window.addEventListener('resize', () => {
+    if(window.innerWidth > 768) {
+        container.classList.remove('mobile');
+        navbar.classList.remove('mobile');
+    } 
 })

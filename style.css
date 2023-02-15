@@ -34,6 +34,12 @@ input:focus,
         "navbar main";
 }
 
+.container.mobile {
+    grid-template-rows: 100vh;
+    grid-template-areas: "navbar";
+    overflow: hidden;
+}
+
 #header,
 #header-container,
 #navbar {
@@ -223,6 +229,10 @@ input:not(:focus) {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#navbar.mobile {
+    display: flex;
 }
 
 #logo-container {
@@ -572,9 +582,4 @@ input:not(:focus) {
         display: block;
     }
 }
-
-
-  
-
-  
-  
+   
