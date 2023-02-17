@@ -336,7 +336,7 @@ input:not(:focus) {
 }
 
 .main-info-card {    
-    height: 8rem; /* Force height - no content */
+    height: 8rem;
     padding: 1rem;
     color: var(--text-color);
 
@@ -437,19 +437,20 @@ input:not(:focus) {
 }
 
 #map {
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
 #best-worst-region-container {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
+    grid-template-columns: repeat(2, minmax(2rem, 1fr));
+    grid-gap: 1rem;
 }
 
 .region-card {
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
-    padding: 0.5rem 4rem 2rem 4rem;
+    padding: 0.5rem 0 2rem 0;
     border-radius: 5px;
 
     display: flex;
@@ -526,7 +527,7 @@ input:not(:focus) {
 
 @media only screen and (max-width: 1200px) {
     .container {
-        grid-template-rows: 30vh 1fr;
+        grid-template-rows: 280px 1fr;
     }
     input:focus {
         width: 180px;
@@ -555,7 +556,7 @@ input:not(:focus) {
 @media only screen and (max-width: 768px) {
     .container {
         grid-template-columns: 100%;
-        grid-template-rows: auto 30vh 1fr;
+        grid-template-rows: auto 280px 1fr;
         grid-template-areas: 
             "menu"
             "header"
@@ -582,4 +583,3 @@ input:not(:focus) {
         display: block;
     }
 }
-   
