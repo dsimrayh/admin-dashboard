@@ -18,7 +18,10 @@
 .profile-button,
 input,
 input:focus,
-.link:hover {
+.link:hover,
+#date-range-picker,
+#menu-icon,
+#menu-icon-2 {
     cursor: pointer;
 }
 
@@ -240,6 +243,7 @@ input:not(:focus) {
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
     text-shadow: -1px -1px 10px rgba(0, 0, 0, 0.4);
     font-family: 'Poppins', sans-serif;
+    user-select: none;
 
     display: flex;
     justify-content: center;
@@ -312,13 +316,28 @@ input:not(:focus) {
     padding: 0 1rem 1rem 1rem;
 }
 
-#content-header {
+#content-header-container {
     background-color: var(--bg-color);
     font-family: 'Rubik', sans-serif;
     font-size: 1.8rem;
     color: var(--text-color);
-    padding: 1rem 0 1rem 3rem;
+    padding: 1rem 3rem 1rem 3rem;
     border-bottom: 2px solid rgba(228, 228, 228, 0.4); 
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#date-range-picker {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+}
+
+#date-range-picker:hover {
+    background-color: #f1f1f1;
 }
 
 .card {
@@ -526,7 +545,7 @@ input:not(:focus) {
 }
 
 @media only screen and (max-width: 1200px) {
-    .container {
+    .container {        
         grid-template-rows: 280px 1fr;
     }
     input:focus {
@@ -581,5 +600,42 @@ input:not(:focus) {
     #menu,
     #menu-2 {
         display: block;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        grid-template-rows: auto 310px 1fr;
+    }
+    #content-header-container {
+        padding: 1rem;
+    }
+    #date-range-picker {
+        font-size: 0.8rem;
+    }
+    #monthly-sales-trends {
+        height: 30rem;
+        padding: 1rem 0.5rem;
+    }
+    #x-labels,
+    #y-labels {
+        font-size: 0.9rem;
+    }
+    #y-labels {
+        margin-right: -1.5rem;
+    }
+    #region-breakdown {
+        height: 30rem;
+    }
+    #projects-activity-container {
+        margin: 1rem 0;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    #projects,
+    #activity {
+        height: 20rem;
     }
 }
