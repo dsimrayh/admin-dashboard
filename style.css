@@ -498,10 +498,62 @@ input:not(:focus) {
     color: red;
 }
 
+/* WORKING ----------------------------------------------------------------------------------------- */ 
+
 #item-performance {
     height: 20rem;
     margin: 1rem 0;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 1rem;
 }
+
+#item-performance-header {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    justify-self: start;
+}
+
+#table {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.row:nth-child(even) {
+    background-color: #eee;
+}
+
+#column-headers-row {
+    color: #555;
+    align-items: center;
+}
+
+.column-header {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    display: grid;
+    place-items: center;
+}
+
+.column-header:last-of-type {
+    border: none;
+}
+
+/* WORKING ----------------------------------------------------------------------------------------- */ 
 
 #projects-activity-container {
     margin: 1rem 0;
