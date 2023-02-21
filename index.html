@@ -76,7 +76,7 @@
                 <div id="revenue" class="main-info-card card">
                     <div class="main-info-card-title">Revenue</div>
                     <div class="main-info-metric">$227,035</div>
-                    <div class="main-info-percent-change">+4.07% vs prior period</div>
+                    <div class="main-info-percent-change green">+4.07% vs prior period</div>
                 </div>
                 <div id="expenses" class="main-info-card card">
                     <div class="main-info-card-title">Expenses</div>
@@ -86,12 +86,12 @@
                 <div id="units-ordered" class="main-info-card card">
                     <div class="main-info-card-title">Units Sold</div>
                     <div class="main-info-metric">17,495</div>
-                    <div class="main-info-percent-change">+11.29% vs prior period</div>
+                    <div class="main-info-percent-change green">+11.29% vs prior period</div>
                 </div>
                 <div id="website-visitors" class="main-info-card card">
                     <div class="main-info-card-title">Website Visitors</div>
                     <div class="main-info-metric">30,590</div>
-                    <div class="main-info-percent-change">+8.73% vs prior period</div>
+                    <div class="main-info-percent-change green">+8.73% vs prior period</div>
                 </div>
             </div>
 
@@ -335,11 +335,8 @@
                 </div>
             </div>
 
-
-
-
             <div id="item-performance" class="card">
-                <p id="item-performance-header">Item performance</p>
+                <p id="item-performance-header">Item performance <span id="last-30-days">(Last 30 days)</span></p>
                 <div id="table">
                     <div id="column-headers-row" class="row">
                         <p class="column-header">Item number</p>
@@ -350,16 +347,53 @@
                         <p class="column-header">% Change revenue</p>
                         <p class="column-header">Velocity</p>
                     </div>
-                    <div class="row item"></div>
-                    <div class="row item"></div>
-                    <div class="row item"></div>
-                    <div class="row item"></div>
-                    <div class="row item"></div>
+                    <div class="row item">
+                        <p class="data">10005359WV-01</p>
+                        <p class="data">Arbitrary inventory 12ct 4pk</p>
+                        <p class="data">6,229 cs</p>
+                        <p class="data green">+2.14%</p>
+                        <p class="data">$29,225</p>
+                        <p class="data green">+3.78%</p>
+                        <p class="data">1,557 cs/week</p>
+                    </div>
+                    <div class="row item">
+                        <p class="data">10002210BR-02</p>
+                        <p class="data">Popular item value pk 100ct</p>
+                        <p class="data">3,515 cs</p>
+                        <p class="data red">-0.50%</p>
+                        <p class="data">$21,074</p>
+                        <p class="data red">-0.12%</p>
+                        <p class="data">878 cs/week</p>
+                    </div>
+                    <div class="row item">
+                        <p class="data">10007903ML-04</p>
+                        <p class="data">Nonsense package 20ct</p>
+                        <p class="data">3,128 cs</p>
+                        <p class="data red">-1.13%</p>
+                        <p class="data">$17,315</p>
+                        <p class="data red">-2.41%</p>
+                        <p class="data">782 cs/week</p>
+                    </div>
+                    <div class="row item">
+                        <p class="data">10004430CS-01</p>
+                        <p class="data">Placeholder item 6ct 3pk</p>
+                        <p class="data">2,890 cs</p>
+                        <p class="data green">+12.89%</p>
+                        <p class="data">$16,408</p>
+                        <p class="data green">+15.59%</p>
+                        <p class="data">722 cs/week</p>
+                    </div>
+                    <div class="row item">
+                        <p class="data">10006157LG-03</p>
+                        <p class="data">Random garbage bundle 2pk</p>
+                        <p class="data">1,733 cs</p>
+                        <p class="data green">+7.75%</p>
+                        <p class="data">$12,992</p>
+                        <p class="data green">+9.47%</p>
+                        <p class="data">443 cs/week</p>
+                    </div>
                 </div>
             </div>
-
-
-
 
             <div id="projects-activity-container">
                 <div id="projects" class="card">Projects</div>

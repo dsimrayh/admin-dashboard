@@ -75,6 +75,13 @@ input:focus,
     align-self: flex-start;
 }
 
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
 
 
 
@@ -276,7 +283,7 @@ input:not(:focus) {
 
 .link {
     color: rgb(170, 170, 170);
-    margin: 1.4rem 1rem;
+    margin: 2rem 1rem;
     font-family: sans-serif;
 
     display: flex;
@@ -385,11 +392,6 @@ input:not(:focus) {
 
 .main-info-percent-change {
     font-size: 0.85rem;
-    color: green;
-}
-
-.red {
-    color: red;
 }
 
 #charts-container {
@@ -498,8 +500,6 @@ input:not(:focus) {
     color: red;
 }
 
-/* WORKING ----------------------------------------------------------------------------------------- */ 
-
 #item-performance {
     height: 20rem;
     margin: 1rem 0;
@@ -514,6 +514,11 @@ input:not(:focus) {
     font-size: 1.5rem;
     color: var(--text-color);
     justify-self: start;
+}
+
+#last-30-days {
+    font-size: 0.9rem;
+    color: #999;
 }
 
 #table {
@@ -534,6 +539,13 @@ input:not(:focus) {
     grid-template-columns: repeat(7, 1fr);
 }
 
+.data {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    display: grid;
+    place-items: center;
+}
+
 .row:nth-child(even) {
     background-color: #eee;
 }
@@ -552,8 +564,6 @@ input:not(:focus) {
 .column-header:last-of-type {
     border: none;
 }
-
-/* WORKING ----------------------------------------------------------------------------------------- */ 
 
 #projects-activity-container {
     margin: 1rem 0;
