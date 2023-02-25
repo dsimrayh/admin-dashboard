@@ -580,7 +580,7 @@ input:not(:focus) {
 }
 
 #projects {
-    height: 25rem;
+    height: 30rem;
     padding: 1rem;
     color: var(--text-color);
 
@@ -705,8 +705,9 @@ input:not(:focus) {
 }
 
 #activity {
-    height: 25rem;
+    height: 30rem;
     padding: 1rem;
+    overflow-y: scroll;
 
     display: grid;
     grid-template-rows: auto repeat(4, 1fr);
@@ -715,20 +716,45 @@ input:not(:focus) {
 #activity-container-header {
     font-size: 1.5rem;
     color: var(--text-color);
+    margin-bottom: 0.2rem;
 }
 
 .activity-item {
-    margin-top: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0 , 0.3);
+    height: 6rem;
+    padding: 3rem 0;
+
+    display: flex;
+    align-items: center;
 }
 
-.activity-item-details-container {
-    margin-top: 0.2rem;
+.user-image {
+   aspect-ratio: 1/1;
+}
+
+.right-side-container {
+    height: 100%;
+    padding-left: 0.5rem;
+
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-name {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.activity-item-description {
+    color: var(--text-color);
+    font-size: 0.9rem;
 }
 
 .timestamp {
-    color: #777;
+    margin-top: 0.2rem;
+    color: #999;
+    font-size: 0.8rem;
 }
 
 .dot {
@@ -737,6 +763,14 @@ input:not(:focus) {
 
 .activity-view-button {
     color: var(--main-color);
+    min-width: 88px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-left: auto;
+}
+
+.activity-view-button:hover {
+    transform: scale(1.1);
 }
 
 #monthly-sales-trends,
@@ -793,7 +827,7 @@ input:not(:focus) {
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     #projects-activity-container {
         margin: 1rem 0;
         display: grid;
