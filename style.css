@@ -114,7 +114,8 @@ input:focus,
     grid-template-columns: auto 1fr;
 }
 
-#header-left-side {
+#header-left-side,
+#action-buttons-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -238,7 +239,7 @@ input:not(:focus) {
 
 #navbar {
     grid-area: navbar;
-    background-color: rgb(48, 48, 48);
+    background-color: rgb(31, 38, 48);
 
     display: flex;
     flex-direction: column;
@@ -803,9 +804,6 @@ input:not(:focus) {
     .container {        
         grid-template-rows: 280px 1fr;
     }
-    input:focus {
-        width: 180px;
-    }
     #header-left-side {
         justify-content: center;
     }
@@ -837,7 +835,16 @@ input:not(:focus) {
     }
 }
 
+@media only screen and (max-width: 900px) {
+    input:focus {
+        width: 174px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
+    input:focus {
+        width: 200px;
+    }
     .container {
         grid-template-columns: 100%;
         grid-template-rows: auto 280px 1fr;
@@ -874,10 +881,22 @@ input:not(:focus) {
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
+    input:focus {
+        width: 175px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
     .container {
         grid-template-rows: auto 310px 1fr;
     }
+    #header-left-side {
+        flex-flow: column wrap;
+    }
+}
+
+@media only screen and (max-width: 500px) {
     #content-header-container {
         padding: 1rem;
     }
