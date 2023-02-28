@@ -38,3 +38,13 @@ window.addEventListener('resize', () => {
         navbar.classList.remove('mobile');
     } 
 })
+
+//GitHub link - highlight on hover
+const githubLink = document.querySelector('#github-link');
+githubLink.addEventListener('mouseenter', () => {
+    githubLink.src = './images/github-white.svg';
+});
+
+githubLink.addEventListener('mouseleave', () => {
+    githubLink.src = './images/github-gray.svg';
+});

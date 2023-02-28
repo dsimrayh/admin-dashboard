@@ -8,6 +8,8 @@
 }
 
 :root {
+    font-size: 16px;
+
     --main-color: rgb(32, 89, 212);
     --text-color: #3b3b3b;
     --bg-color: rgb(243, 247, 255);
@@ -241,10 +243,12 @@ input:not(:focus) {
 #navbar {
     grid-area: navbar;
     background-color: rgb(31, 38, 48);
+    position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
 #navbar.mobile {
@@ -317,6 +321,13 @@ input:not(:focus) {
     height: 1px;
     width: 100%;
     background-color: rgb(97, 96, 96);
+}
+
+#github-link {
+    margin: 0 0 0.5rem 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 
@@ -459,10 +470,22 @@ input:not(:focus) {
     grid-gap: 1rem;
 }
 
+#region-breakdown-header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #region-breakdown-header {
     color: var(--text-color);
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+#region-breakdown-subheader {
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
 }
 
 #map {
@@ -479,7 +502,7 @@ input:not(:focus) {
 
 .region-card {
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
-    padding: 0.5rem 0 2rem 0;
+    padding: 0.5rem 0 1rem 0;
     border-radius: 5px;
 
     display: flex;
@@ -489,7 +512,7 @@ input:not(:focus) {
 }
 
 .region-card-header {
-    margin-bottom: 2rem;
+    margin: 0.5rem 0;
     font-weight: bold;
     color: var(--text-color);
 }
@@ -498,6 +521,16 @@ input:not(:focus) {
     text-transform: uppercase;
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+.region-units-sold {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.units {
+    color: var(--main-color);
 }
 
 #best-region {
@@ -531,6 +564,8 @@ input:not(:focus) {
 
 #last-30-days {
     font-size: 0.9rem;
+    margin-left: 0.5rem;
+    margin-top: 2px;
     color: #999;
 }
 
@@ -638,7 +673,6 @@ input:not(:focus) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 0.5rem;
-    
 }
 
 .project-card {
@@ -916,6 +950,9 @@ input:not(:focus) {
 }
 
 @media only screen and (max-width: 500px) {
+    :root {
+        font-size: 15px;
+    }
     #content-header-container {
         padding: 1rem;
     }

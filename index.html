@@ -64,7 +64,7 @@
                 <li class="link"><img class="navbar-link-img" src="./images/gray-icons/privacy.png"><p class="navbar-link-text">Privacy</p></li></li>
                 <li class="link"><img class="navbar-link-img" src="./images/gray-icons/support.png"><p class="navbar-link-text">Support</p></li></li>              
             </ul>
-            
+            <a href="https://github.com/dsimrayh"><img id="github-link" src="./images/github-gray.svg" alt="github"></a>
         </nav>
 
         <main id="main">
@@ -321,16 +321,21 @@
                     <p id="y-labels">Sales</p>
                 </div>
                 <div id="region-breakdown" class="card">
-                    <p id="region-breakdown-header">Region Breakdown</p>
+                    <div id="region-breakdown-header-container">
+                        <p id="region-breakdown-header">Region Breakdown</p>
+                        <p id="region-breakdown-subheader">(units sold by region)</p>
+                    </div>
                     <img id="map" src="./images/us.svg" alt="heatmap">
                     <div id="best-worst-region-container">
                         <div id="best-region-card" class="region-card">
                             <p class="region-card-header">Best Region</p>
                             <p id="best-region" class="region">Midwest</p>
+                            <p class="region-units-sold"><span class=units>7,154</span> units sold</p>
                         </div>
                         <div id="worst-region-card" class="region-card">
                             <p class="region-card-header" >Worst Region</p>
                             <p id="worst-region" class="region">Southwest</p>
+                            <p class="region-units-sold"><span class=units>1,519</span> units sold</p>
                         </div>
                     </div>
                 </div>
