@@ -23,8 +23,11 @@ This main focus of this project is layout and design using CSS, with an emphasis
 * Various CSS selectors
 * Responsive styling / Media Queries
 
-#### Picture / Icon credits
+### Picture / Icon credits
 **Profile picture:** Andrea Piacquadio on Pexels
+
 **Line graph**: magicpattern.design
+
 **US Map**: simplemaps.com
+
 **All other icons**: Icons8.com
